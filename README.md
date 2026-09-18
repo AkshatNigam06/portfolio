@@ -83,6 +83,13 @@ You can download my latest resume directly from my portfolio website.
 - 💻 **GitHub:** [AkshatNigam06](https://github.com/AkshatNigam06)
 - 📧 **Email:** akshatnigamdelhi9@gmail.com
 
+### GitHub par kaise add karna hai
+
+Tumhare screenshot me **"Add a README"** button dikh raha hai.
+
+Uspe click karo → upar wala पूरा content paste karo → **Commit changes**.
+
+Bas bhai, phir tumhare repository me proper README aa jayega. 🚀
 ## 📁 Repository Structure
 
 ```text
