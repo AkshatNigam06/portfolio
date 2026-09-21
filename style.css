@@ -1705,4 +1705,1136 @@ body.light-mode .footer {
 body.light-mode .theme-toggle {
     background: #111;
     color: #39e6a1;
+}/* =========================================================
+   CINEMATIC HERO SECTION
+========================================================= */
+
+.hero-new {
+
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    background: #080808;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+.hero-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,0.035) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 100px 100px;
+
+    mask-image:
+
+        linear-gradient(
+            to bottom,
+            transparent,
+            black 20%,
+            black 80%,
+            transparent
+        );
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   ORANGE BACKGROUND GLOW
+========================================================= */
+
+.hero-glow {
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    left: 50%;
+    top: 45%;
+
+    transform:
+        translate(-50%, -50%);
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(255,92,20,0.22),
+            rgba(255,92,20,0.08) 35%,
+            transparent 70%
+        );
+
+    filter: blur(25px);
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   PARTICLES
+========================================================= */
+
+.particles span {
+
+    position: absolute;
+
+    width: 3px;
+    height: 3px;
+
+    background: rgba(255,255,255,0.7);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 8px rgba(255,255,255,0.5);
+
+    animation:
+        particleFloat 6s infinite ease-in-out;
+
+}
+
+
+.particles span:nth-child(1) {
+    left: 10%;
+    top: 20%;
+}
+
+.particles span:nth-child(2) {
+    left: 20%;
+    top: 70%;
+    animation-delay: 1s;
+}
+
+.particles span:nth-child(3) {
+    left: 75%;
+    top: 18%;
+    animation-delay: 2s;
+}
+
+.particles span:nth-child(4) {
+    left: 88%;
+    top: 65%;
+    animation-delay: 3s;
+}
+
+.particles span:nth-child(5) {
+    left: 35%;
+    top: 12%;
+    animation-delay: 1.5s;
+}
+
+.particles span:nth-child(6) {
+    left: 65%;
+    top: 80%;
+    animation-delay: 2.5s;
+}
+
+.particles span:nth-child(7) {
+    left: 8%;
+    top: 48%;
+    animation-delay: 4s;
+}
+
+.particles span:nth-child(8) {
+    left: 92%;
+    top: 38%;
+    animation-delay: 3.5s;
+}
+
+
+@keyframes particleFloat {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+        opacity: 0.25;
+
+    }
+
+    50% {
+
+        transform: translateY(-20px);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* =========================================================
+   TOP LEFT
+========================================================= */
+
+.hero-top-left {
+
+    position: absolute;
+
+    top: 30px;
+    left: 45px;
+
+    z-index: 50;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: rgba(255,255,255,0.7);
+
+}
+
+
+.mini-dot {
+
+    width: 7px;
+    height: 7px;
+
+    background: #39e6a1;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 10px #39e6a1;
+
+    animation:
+        statusPulse 1.8s infinite;
+
+}
+
+
+@keyframes statusPulse {
+
+    0%,
+    100% {
+
+        opacity: 1;
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        opacity: 0.4;
+        transform: scale(0.7);
+
+    }
+
+}
+
+
+/* =========================================================
+   TOP RIGHT
+========================================================= */
+
+.hero-top-right {
+
+    position: absolute;
+
+    top: 30px;
+    right: 45px;
+
+    z-index: 50;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+
+.hero-top-right a {
+
+    color: rgba(255,255,255,0.7);
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    transition: 0.3s ease;
+
+}
+
+
+.hero-top-right a:hover {
+
+    color: #39e6a1;
+
+}
+
+
+.top-line {
+
+    width: 25px;
+
+    height: 1px;
+
+    background:
+        rgba(255,255,255,0.25);
+
+}
+
+
+/* =========================================================
+   HUGE BACKGROUND TEXT
+========================================================= */
+
+.hero-big-text {
+
+    position: absolute;
+
+    top: 17%;
+
+    left: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: clamp(
+        100px,
+        18vw,
+        280px
+    );
+
+    font-weight: 900;
+
+    letter-spacing: -12px;
+
+    color: transparent;
+
+    -webkit-text-stroke:
+        1px rgba(255,255,255,0.055);
+
+    pointer-events: none;
+
+    user-select: none;
+
+}
+
+
+/* =========================================================
+   MAIN HERO AREA
+========================================================= */
+
+.hero-main {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.hero-title {
+
+    position: relative;
+
+    z-index: 10;
+
+    text-align: center;
+
+    pointer-events: none;
+
+    margin-top: 70px;
+
+}
+
+
+.hero-title h1 {
+
+    margin: 0;
+
+    font-size: clamp(
+        70px,
+        11vw,
+        170px
+    );
+
+    line-height: 0.75;
+
+    font-weight: 900;
+
+    letter-spacing: -7px;
+
+    color: white;
+
+    text-shadow:
+        0 10px 35px rgba(0,0,0,0.8);
+
+}
+
+
+.hero-title h2 {
+
+    margin: 0;
+
+    font-size: clamp(
+        42px,
+        7vw,
+        105px
+    );
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: -4px;
+
+    color: #ff6b2b;
+
+    text-shadow:
+        0 0 35px rgba(255,92,30,0.2);
+
+}
+
+
+.hero-title h2 span {
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   CHARACTER AREA
+========================================================= */
+
+.character-area {
+
+    position: absolute;
+
+    left: 50%;
+    top: 49%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: 430px;
+    height: 560px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 25;
+
+    transition:
+        transform 0.15s ease-out;
+
+}
+
+
+/* =========================================================
+   CHARACTER GLOW
+========================================================= */
+
+.character-glow {
+
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(255,105,35,0.35),
+            rgba(255,105,35,0.08) 40%,
+            transparent 70%
+        );
+
+    filter: blur(20px);
+
+}
+
+
+/* =========================================================
+   CHARACTER RING
+========================================================= */
+
+.character-ring {
+
+    position: absolute;
+
+    width: 340px;
+    height: 340px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(255,120,50,0.25);
+
+    box-shadow:
+
+        0 0 80px
+        rgba(255,90,20,0.15);
+
+    animation:
+        ringPulse 5s infinite ease-in-out;
+
+}
+
+
+@keyframes ringPulse {
+
+    0%,
+    100% {
+
+        transform: scale(1);
+
+        opacity: 0.5;
+
+    }
+
+    50% {
+
+        transform: scale(1.08);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* =========================================================
+   AVATAR
+========================================================= */
+
+.hero-character {
+
+    position: relative;
+
+    width: 390px;
+
+    max-height: 520px;
+
+    object-fit: contain;
+
+    z-index: 25;
+
+    filter:
+
+        drop-shadow(
+            0 25px 35px
+            rgba(0,0,0,0.6)
+        );
+
+    animation:
+
+        characterFloat
+        4s
+        ease-in-out
+        infinite;
+
+    user-select: none;
+
+}
+
+
+@keyframes characterFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-12px);
+
+    }
+
+}
+
+
+/* =========================================================
+   CHARACTER LABEL
+========================================================= */
+
+.character-label {
+
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 30;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    white-space: nowrap;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(255,255,255,0.45);
+
+}
+
+
+.character-label span {
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #ff7134;
+
+    box-shadow:
+        0 0 8px #ff7134;
+
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.hero-intro {
+
+    position: absolute;
+
+    left: 50px;
+
+    bottom: 110px;
+
+    z-index: 40;
+
+    width: 220px;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(255,255,255,0.75);
+
+}
+
+
+.hero-intro p {
+
+    margin-top: 8px;
+
+    font-size: 8px;
+
+    line-height: 1.7;
+
+    letter-spacing: 1px;
+
+    color:
+        rgba(255,255,255,0.4);
+
+}
+
+
+/* =========================================================
+   BOTTOM AREA
+========================================================= */
+
+.hero-bottom {
+
+    position: absolute;
+
+    left: 45px;
+    right: 45px;
+    bottom: 28px;
+
+    z-index: 50;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.hero-location {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(255,255,255,0.4);
+
+}
+
+
+.hero-location div {
+
+    width: 30px;
+
+    height: 1px;
+
+    background:
+        rgba(255,255,255,0.2);
+
+}
+
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+.scroll-explore {
+
+    position: absolute;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(255,255,255,0.6);
+
+}
+
+
+.scroll-circle {
+
+    width: 30px;
+    height: 30px;
+
+    border:
+        1px solid rgba(255,255,255,0.25);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #ff7134;
+
+    animation:
+        scrollBounce 1.8s infinite;
+
+}
+
+
+@keyframes scrollBounce {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(5px);
+
+    }
+
+}
+
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+.hero-year {
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(255,255,255,0.35);
+
+}
+
+
+/* =========================================================
+   DESKTOP HOVER EFFECT
+========================================================= */
+
+.hero-new {
+
+    transition:
+        background 0.3s ease;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .hero-new {
+
+        min-height: 100svh;
+
+    }
+
+
+    .hero-top-left {
+
+        top: 20px;
+
+        left: 20px;
+
+        font-size: 8px;
+
+    }
+
+
+    .hero-top-right {
+
+        top: 20px;
+
+        right: 20px;
+
+    }
+
+
+    .hero-top-right a {
+
+        font-size: 7px;
+
+    }
+
+
+    .hero-top-right a:first-child,
+    .top-line {
+
+        display: none;
+
+    }
+
+
+    .hero-big-text {
+
+        top: 25%;
+
+        font-size: 27vw;
+
+        letter-spacing: -5px;
+
+    }
+
+
+    .hero-title {
+
+        margin-top: 100px;
+
+    }
+
+
+    .hero-title h1 {
+
+        font-size: 18vw;
+
+        letter-spacing: -4px;
+
+    }
+
+
+    .hero-title h2 {
+
+        font-size: 10.5vw;
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .character-area {
+
+        top: 43%;
+
+        width: 300px;
+
+        height: 400px;
+
+    }
+
+
+    .character-glow {
+
+        width: 300px;
+
+        height: 300px;
+
+    }
+
+
+    .character-ring {
+
+        width: 245px;
+
+        height: 245px;
+
+    }
+
+
+    .hero-character {
+
+        width: 275px;
+
+        max-height: 380px;
+
+    }
+
+
+    .character-label {
+
+        bottom: 0;
+
+        font-size: 6px;
+
+    }
+
+
+    .hero-intro {
+
+        left: 20px;
+
+        bottom: 75px;
+
+        width: 180px;
+
+    }
+
+
+    .hero-intro span {
+
+        font-size: 7px;
+
+    }
+
+
+    .hero-intro p {
+
+        font-size: 6px;
+
+    }
+
+
+    .hero-location {
+
+        display: none;
+
+    }
+
+
+    .hero-year {
+
+        display: none;
+
+    }
+
+
+    .scroll-explore {
+
+        left: auto;
+
+        right: 20px;
+
+        transform: none;
+
+    }
+
+
+    .scroll-explore span {
+
+        display: none;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .hero-character {
+
+        width: 235px;
+
+    }
+
+
+    .character-area {
+
+        top: 42%;
+
+    }
+
+
+    .hero-title {
+
+        margin-top: 90px;
+
+    }
+
+
+    .hero-intro {
+
+        bottom: 70px;
+
+    }
+
+}
+/* ================= RESUME BUTTON ================= */
+
+.hero-resume {
+    position: absolute;
+    right: 50px;
+    bottom: 105px;
+    z-index: 50;
+}
+
+.hero-resume a {
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    border: 1px solid rgba(57, 230, 161, 0.7);
+    border-radius: 30px;
+
+    color: #39e6a1;
+
+    text-decoration: none;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    background: rgba(57, 230, 161, 0.04);
+
+    transition: all 0.3s ease;
+}
+
+.hero-resume a:hover {
+    background: #39e6a1;
+    color: #080808;
+
+    box-shadow:
+        0 0 20px rgba(57, 230, 161, 0.35);
+
+    transform: translateY(-3px);
+}
+
+
+@media (max-width: 700px) {
+
+    .hero-resume {
+        right: 20px;
+        bottom: 115px;
+    }
+
+    .hero-resume a {
+        padding: 9px 14px;
+        font-size: 8px;
+    }
+
 }

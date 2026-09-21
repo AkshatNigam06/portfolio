@@ -214,3 +214,129 @@ themeToggle.addEventListener("click", () => {
     }
 
 });
+/* =====================================================
+   CINEMATIC HERO PARALLAX
+===================================================== */
+
+const heroNew = document.querySelector(".hero-new");
+const characterArea = document.querySelector(".character-area");
+const heroTitle = document.querySelector(".hero-title");
+
+if (heroNew && characterArea && heroTitle) {
+
+    heroNew.addEventListener("mousemove", (e) => {
+
+        const rect = heroNew.getBoundingClientRect();
+
+        const x =
+            (e.clientX - rect.left) / rect.width - 0.5;
+
+        const y =
+            (e.clientY - rect.top) / rect.height - 0.5;
+
+
+        characterArea.style.transform =
+            `translate(-50%, -50%)
+             translate(${x * 18}px, ${y * 12}px)`;
+
+
+        heroTitle.style.transform =
+            `translate(${x * -8}px, ${y * -5}px)`;
+
+    });
+
+
+    heroNew.addEventListener("mouseleave", () => {
+
+        characterArea.style.transform =
+            "translate(-50%, -50%)";
+
+        heroTitle.style.transform =
+            "translate(0, 0)";
+
+    });
+
+}
+
+
+/* =====================================================
+   HERO MOUSE GLOW
+===================================================== */
+
+if (heroNew) {
+
+    heroNew.addEventListener("mousemove", (e) => {
+
+        const rect =
+            heroNew.getBoundingClientRect();
+
+        const x =
+            ((e.clientX - rect.left) / rect.width) * 100;
+
+        const y =
+            ((e.clientY - rect.top) / rect.height) * 100;
+
+
+        heroNew.style.background = `
+            radial-gradient(
+                circle at ${x}% ${y}%,
+                rgba(255, 91, 30, 0.08),
+                transparent 32%
+            ),
+            #080808
+        `;
+
+    });
+
+
+    heroNew.addEventListener("mouseleave", () => {
+
+        heroNew.style.background =
+            "#080808";
+
+    });
+
+}
+
+
+/* =====================================================
+   HERO SCROLL PARALLAX
+===================================================== */
+
+window.addEventListener("scroll", () => {
+
+    const hero =
+        document.querySelector(".hero-new");
+
+    if (!hero) return;
+
+    const scroll =
+        window.scrollY;
+
+    if (scroll < window.innerHeight) {
+
+        const character =
+            document.querySelector(".character-area");
+
+        const bigText =
+            document.querySelector(".hero-big-text");
+
+
+        if (character) {
+
+            character.style.marginTop =
+                `${scroll * 0.12}px`;
+
+        }
+
+
+        if (bigText) {
+
+            bigText.style.transform =
+                `translateY(${scroll * 0.18}px)`;
+
+        }
+
+    }
+
+});
