@@ -3769,3 +3769,149 @@ body.light-mode .experience-divider {
         gap: 10px;
     }
 }
+/* HOME PAGE EXPERIENCE HIGHLIGHT */
+
+.hero-exp-highlight {
+    position: absolute;
+    left: 5vw;
+    bottom: 112px;
+    width: 390px;
+    padding: 25px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    background: rgba(15, 20, 28, 0.88);
+    border: 1px solid rgba(57, 230, 161, 0.45);
+    border-radius: 14px;
+    backdrop-filter: blur(14px);
+    transform: rotate(-2deg);
+    transition: all 0.35s ease;
+    z-index: 5;
+}
+
+.hero-exp-highlight:hover {
+    transform: rotate(0deg) translateY(-8px);
+    border-color: #39e6a1;
+    box-shadow: 0 15px 40px rgba(57, 230, 161, 0.15);
+}
+
+.exp-side-label {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: #39e6a1;
+    color: #07130e;
+    padding: 5px 12px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    border-radius: 4px;
+}
+
+.exp-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #39e6a1;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.exp-dot {
+    width: 7px;
+    height: 7px;
+    background: #39e6a1;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #39e6a1;
+}
+
+.exp-main h3 {
+    margin: 15px 0 5px;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.exp-main h3 span {
+    color: #39e6a1;
+}
+
+.exp-main p {
+    margin: 0;
+    color: #a5aab3;
+    font-size: 13px;
+}
+
+.exp-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    font-size: 10px;
+    color: #a5aab3;
+    letter-spacing: 1px;
+}
+
+.exp-view {
+    color: #39e6a1;
+    font-weight: 800;
+}
+
+.exp-stamp {
+    position: absolute;
+    right: 18px;
+    top: 45px;
+    font-size: 55px;
+    font-weight: 900;
+    color: rgba(57, 230, 161, 0.07);
+}
+
+/* LIGHT MODE */
+
+body.light-mode .hero-exp-highlight {
+    background: rgba(255,255,255,0.92);
+    color: #111;
+    border-color: rgba(0,150,100,0.35);
+}
+
+body.light-mode .exp-main p,
+body.light-mode .exp-bottom {
+    color: #555;
+}
+
+RESPONSIVE DESIGN
+
+@media (max-width: 700px) {
+    .hero-exp-highlight {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        width: calc(100% - 40px);
+        max-width: 390px;
+        margin: 25px auto;
+        box-sizing: border-box;
+        transform: rotate(-1deg);
+    }
+
+    .hero-exp-highlight:hover {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 380px) {
+    .hero-exp-highlight {
+        padding: 18px;
+    }
+
+    .exp-main h3 {
+        font-size: 25px;
+    }
+
+    .exp-bottom {
+        font-size: 9px;
+    }
+}
